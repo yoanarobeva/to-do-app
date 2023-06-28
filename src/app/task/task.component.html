@@ -1,0 +1,7 @@
+<li data-id='test1' [className]="isCompleted ? 'completed' : ''">{{task}}
+    <div class="tools">
+        <button class="complete" (click)="completeTask()"><i class="fas fa-check"></i></button>
+        <button class="edit" (click)="editTask()">EDIT</button>
+        <button class="delete" (click)="deleteTask()"><i class="fas fa-times"></i></button>
+    </div>
+</li>

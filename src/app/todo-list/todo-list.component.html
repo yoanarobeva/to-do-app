@@ -1,0 +1,11 @@
+<div class="todolist">
+    <h3>List of Works Todo:</h3>
+    <p class="error-info"></p>
+    <ul>
+        <app-task
+            *ngFor="let x of tasks"
+            [task]="x.task"
+            [isCompleted]="x.isCompleted"
+        ></app-task>
+    </ul>
+</div>

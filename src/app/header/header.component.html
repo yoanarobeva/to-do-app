@@ -1,0 +1,5 @@
+<div class="header">
+    <h1>ToDo List</h1>
+    <input #newTask (keyup.enter)="addNewTask(newTask.value)" type="text" class="todo-input" placeholder="Write your todo list here...">
+    <button class="btn-add" (click)="addNewTask(newTask.value)">Add</button>
+</div>

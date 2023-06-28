@@ -1,0 +1,8 @@
+.todolist {
+    padding: 20px 0;
+}
+
+.todolist h3 {
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
