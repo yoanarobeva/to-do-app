@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Task } from '../model/task.model';
-import { TaskData } from '../data/data';
+import { TasksService } from '../tasks.service';
 
 @Component({
   selector: 'app-todo',
@@ -8,16 +8,13 @@ import { TaskData } from '../data/data';
   styleUrls: ['./todo.component.css']
 })
 
-export class TodoComponent implements OnInit{
-  tasks: Task[] = [];
+export class TodoComponent {
+  constructor(private service: TasksService) {}
 
-  constructor() {}
-
-  ngOnInit() {
-    this.tasks = new TaskData().getData();    
-  }
+  tasks: Task[] = this.service.getTasks();
 
   addTask(newTask: string) {
-    this.tasks.push(new Task(newTask, false));
+    this.service.addTask(newTask);
   }
+
 }
